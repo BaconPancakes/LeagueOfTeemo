@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="814012828">
+    <data-source source="LOCAL" name="Rails Teemo: production" uuid="47d1a3e9-d060-45f1-bd7b-b04abcb8ceb1">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Allen\Documents\Documents\Ruby\Teemo\Teemo\db\production.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
