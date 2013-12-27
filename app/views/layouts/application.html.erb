@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>League of Teemo|<%=yield(:title)%></title>
-  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Teemo" %>">
-  <%= stylesheet_link_tag "application", media: "all" %>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <script src="https://code.jquery.com/jquery.js"></script>
-
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-  <%= render 'layouts/navigation' %>
+<header class = "navbar navbar-fixed-top navbar-inverse">
+  <div class ="navbar-inner">
+    <div class = "container">
+      <%=link_to "League of Teemo", root_path, id: "logo" %>
+      <nav>
+        <ul class ="nav pull-right">
+          <li><%= link_to "Home",   root_path %></li>
+          <li><%= link_to "About",  about_path%></li>
+          <li><%= link_to "Contact", contact_path%></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
-
-<%= render 'layouts/messages' %>
 <%= yield %>
 
 </body>
