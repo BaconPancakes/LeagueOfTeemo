@@ -1,9 +1,15 @@
 <% provide(:title, 'Home') %>
-<h1>Sample App</h1>
+
+<div class="center hero-unit ">
+<h1>Welcome to the League of Teemo!</h1>
+
+  <%= form_tag("/search", method: "get") do %>
+      <%= text_field_tag :summoner, params[:summoner], :placeholder => "Enter a summoner here." %>
+      <div class>
+      <%= submit_tag("Let's Teemo!", :name => nil, :class => 'btn btn-large btn-primary') %>
+      </div>
+  <% end %>
 <p>
-  This is the home page for the
-  <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-  sample application.
+  Implementing features soon!
 </p>
-</body>
-</html>
+</div>

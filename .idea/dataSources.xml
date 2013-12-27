@@ -7,6 +7,12 @@
       <jdbc-url>jdbc:sqlite:C:\Users\Allen\Documents\Documents\Ruby\Teemo\Teemo\db\production.sqlite3</jdbc-url>
       <libraries />
     </data-source>
+    <data-source source="LOCAL" name="Rails Teemo: development" uuid="fb98b9e1-ab5c-4169-8b15-d29cff333aaf">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Allen\Documents\Documents\Ruby\Teemo\Teemo\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 
