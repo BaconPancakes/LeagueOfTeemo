@@ -1,11 +1,3 @@
 <% provide(:title, 'Teemo!') %>
-<div class = "container">
-  <div class = "hero-unit">
-    <h2>Teemo Statistics</h2>
-  </div>
-
-  <div class = "container">
-    <%= render :partial =>"main/noresults" if @results.teemo_count_total == 0 %>
-    <%= render :partial => "main/results" if @results.teemo_count_total > 0%>
-  </div>
-</div>
+<h3 class = "hero-unit">Teemo Statistics</h3>
+<p class = "center"><%= @search %></p>
