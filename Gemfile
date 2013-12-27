@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'ruby-lol'
+gem 'vigor'
 
 gem 'rails', '3.2.16'
 gem 'bootstrap-sass', '2.1'

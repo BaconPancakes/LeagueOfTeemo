@@ -5,4 +5,7 @@ class MainController < ApplicationController
   end
   def contact
   end
+  def search
+    @search = Search.analyze(params[:summoner])
+  end
 end

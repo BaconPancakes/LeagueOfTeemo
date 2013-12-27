@@ -3,6 +3,7 @@ Teemo::Application.routes.draw do
   root :to => 'main#home'
   match '/about', to: 'main#about'
   match '/contact', to: 'main#contact'
+  match "/search", to: 'main#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
