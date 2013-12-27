@@ -1,3 +1,6 @@
 <% provide(:title, 'Teemo!') %>
 <h3 class = "hero-unit">Teemo Statistics</h3>
-<p class = "center">Number of times Teemo was played by this summoner: <%= @results.teemo_count_me %></p>
+<body>
+    <div>Number of times Teemo was played by this summoner: <%= @results.teemo_count_me %></div>
+    <div>Number of times Teemo was played in the last ten games: <%= @results.teemo_count_total %></div>
+</body>
