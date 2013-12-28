@@ -1,9 +1,11 @@
 <% provide(:title, 'Teemo!') %>
-<h3 class = "center hero-unit">Teemo Statistics</h3>
-<body class = "center">
-    <div>Number of times Teemo was played by <%= @results.summoner %>: <%= @results.teemo_count_me %></div>
-    <div>Number of times Teemo was played in <%= @results.summoner %>'s last ten games: <%= @results.teemo_count_total %></div>
+<div class = "container">
+  <div class = "hero-unit">
+    <h2>Teemo Statistics</h2>
+  </div>
 
-    <div>Enemies of Teemo were blinded and/or slowed by mushrooms for around <%= distance_of_time_in_words(@results.teemo_CC)%>.</div>
-
-</body>
+  <div class = "container">
+    <%= render :partial =>"main/noresults" if @results.teemo_count_total == 0 %>
+    <%= render :partial => "main/results" if @results.teemo_count_total > 0%>
+  </div>
+</div>

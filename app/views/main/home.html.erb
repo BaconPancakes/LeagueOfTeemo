@@ -1,15 +1,17 @@
 <% provide(:title, 'Home') %>
 
-<div class="center hero-unit ">
-<h1>Welcome to the League of Teemo!</h1>
+<div class="hero-unit">
+  <div class = "container center">
+    <h1>Welcome to the League of Teemo!</h1>
 
-  <%= form_tag("/search", method: "get") do %>
-      <%= text_field_tag :summoner, params[:summoner], :placeholder => "Enter a summoner here." %>
-      <div class>
-      <%= submit_tag("Let's Teemo!", :name => nil, :class => 'btn btn-info') %>
-      </div>
-  <% end %>
-<p>
-  Implementing features soon!
-</p>
+    <%= form_tag("/search", method: "get") do %>
+        <%= text_field_tag :summoner, params[:summoner], :placeholder => "Enter a summoner here." %>
+        <div class>
+          <%= submit_tag("Let's Teemo!", :name => nil, :class => 'btn btn-info') %>
+        </div>
+    <% end %>
+    <p>
+      Implementing features soon!
+    </p>
+  </div>
 </div>
