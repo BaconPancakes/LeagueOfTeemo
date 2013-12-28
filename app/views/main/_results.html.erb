@@ -1,0 +1,11 @@
+<div>Number of times Teemo was played by <%= @results.summoner %>: <%= @results.teemo_count_me %></div>
+<div>Number of times Teemo was played in <%= @results.summoner %>'s last ten games: <%= @results.teemo_count_total %></div>
+<div>Teemo maliciously roamed the Fields of Justice for around <%=distance_of_time_in_words(@results.teemo_time)%>.</div>
+<div>Summoners died <%=@results.teemo_deaths%> times playing Teemo.</div>
+<div>Enemies of Teemo were blinded and/or slowed by mushrooms for around <%= distance_of_time_in_words(@results.teemo_CC)%>.</div>
+<div>Teemo dealt <%=@results.teemo_damage_dealt%> damage to his victims.</div>
+<div>Teemo viciously slayed <%=@results.teemo_kills%> champions</div>
+<div>Teemo indirectly killed <%=@results.teemo_assists%> champions.</div>
+<div>Teemo withstood <%=@results.teemo_damage_taken%> damage from his enemies.</div>
+<div>Teemo relentlessly destroyed <%=@results.teemo_turrets_killed%> turrets.</div>
+<div>Teemo put <%=@results.teemo_gold%> gold in the bank. </div>
