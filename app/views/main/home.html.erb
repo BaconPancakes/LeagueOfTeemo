@@ -4,9 +4,9 @@
   <div class = "container center">
     <h1 class = "h1">Welcome to the League of Teemo!</h1>
 
-    <%= form_tag("/search", method: "get") do %>
+    <%= form_tag("/search", method: "get",) do %>
         <div class = "container">
-          <%= text_field_tag :summoner, nil, :placeholder => "Enter a summoner here." %>
+          <%= text_field_tag :summoner, nil, :placeholder => "Enter a summoner here.", :class => 'form-control' %>
 
           <div class="btn-group" id = "regions" data-toggle="buttons">
             <label class = "btn btn-default active">
@@ -20,9 +20,7 @@
             </label>
           </div>
         </div>
-        <div id = "submit-button">
-          <%= submit_tag("Let's Teemo!", :name => nil, :class => 'btn btn-info') %>
-        </div>
+          <%= submit_tag("Let's Teemo!", :name => nil, :class => 'btn btn-info', :id => 'submit-button') %>
     <% end %>
     <p>
       Implementing features soon!

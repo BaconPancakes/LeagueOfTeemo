@@ -11,13 +11,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-  <%= render 'layouts/navigation' %>
-</header>
-<% flash.each do |key, value| %>
-    <%= render 'layouts/messages' %>
-<% end %>
-<%= yield %>
+<div class = "container">
+  <header>
+    <%= render 'layouts/navigation' %>
+  </header>
+  <% flash.each do |key, value| %>
+      <%= render 'layouts/messages' %>
+  <% end %>
+  <%= yield %>
+</div>
 
 </body>
 </html>
