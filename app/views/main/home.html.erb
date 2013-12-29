@@ -2,10 +2,11 @@
 
 <div class="jumbotron">
   <div class = "container center">
-    <h1 class = "h1">Welcome to the League of Teemo!</h1>
-
+    <div id = "header">
+      <h1 class = "h1">Welcome to the League of Teemo!</h1>
+    </div>
     <%= form_tag("/search", method: "get",) do %>
-        <div class = "container">
+        <div class = "container" id = "bar">
           <%= text_field_tag :summoner, nil, :placeholder => "Enter a summoner here.", :class => 'form-control' %>
 
           <div class="btn-group" id = "regions" data-toggle="buttons">
@@ -20,7 +21,7 @@
             </label>
           </div>
         </div>
-          <%= submit_tag("Let's Teemo!", :name => nil, :class => 'btn btn-info', :id => 'submit-button') %>
+        <%= submit_tag("Let's Teemo!", :name => nil, :class => 'btn btn-info', :id => 'submit-button') %>
     <% end %>
     <p>
       Implementing features soon!
