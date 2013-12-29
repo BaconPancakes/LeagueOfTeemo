@@ -5,14 +5,8 @@
 html {
   overflow-y: scroll;
 }
-body {
-  padding-top: 60px;
-}
 section {
   overflow: auto;
-}
-textarea {
-  resize: vertical;
 }
 .center {
   text-align: center;
@@ -20,15 +14,21 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+.navbar .nav > li{
+  line-height: 25px;
+}
+.navbar .container {
+
+}
 
 #logo {
   float:left;
-  margin-right: 10px;
+  margin-right: 12px;
   font-size: 1.7em;
-  text-transform: uppercase;
-  padding-top: 9px;
+  padding-top: 12px;
+  text-transform: none;
   font-weight: bold;
-  color: #DCED6D;
+  color: #ffffff;
 }
 
 #logo:hover {
@@ -37,31 +37,6 @@ textarea {
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
+body { padding-top: 100px; }
 
-h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #999;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
-#summoner {
-  width: 75%;
-}

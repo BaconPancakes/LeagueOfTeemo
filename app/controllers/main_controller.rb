@@ -6,7 +6,10 @@ class MainController < ApplicationController
   def contact
   end
   def search
-    @results = Search.new params[:summoner]
-
+    @results = Search.new(params[:summoner], params[:region])
+    if @results.summoner == nil
+      flash[:danger] = "We couldn't find a summoner by that name!"
+      redirect_to root_path
+    end
   end
 end

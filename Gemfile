@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'yettings'
+gem 'settingslogic'
 gem 'vigor'
 
 gem 'rails', '3.2.16'

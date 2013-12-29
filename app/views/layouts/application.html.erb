@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>League of Teemo|<%=yield(:title)%></title>
+  <title>League of Teemo | <%=yield(:title)%></title>
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Teemo" %>">
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
@@ -14,8 +14,9 @@
 <header>
   <%= render 'layouts/navigation' %>
 </header>
-
-<%= render 'layouts/messages' %>
+<% flash.each do |key, value| %>
+    <%= render 'layouts/messages' %>
+<% end %>
 <%= yield %>
 
 </body>

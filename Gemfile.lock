@@ -147,6 +147,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    settingslogic (2.0.9)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -168,6 +169,7 @@ GEM
     will_paginate (3.0.3)
     xpath (0.1.4)
       nokogiri (~> 1.3)
+    yettings (0.1.1)
 
 PLATFORMS
   x86-mingw32
@@ -188,7 +190,9 @@ DEPENDENCIES
   rails_layout
   rspec-rails (= 2.11.0)
   sass-rails (= 3.2.5)
+  settingslogic
   sqlite3 (= 1.3.5)
   uglifier (= 1.2.3)
   vigor
   will_paginate (= 3.0.3)
+  yettings
