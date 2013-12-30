@@ -25,6 +25,6 @@ $(document).ready(function(){
         chosenRandom.push(random);
         quovolver.append(newItems[random]);
     }
-    $('.quovolver').quovolver({autoPlaySpeed : 6000});
+    $('.quovolver').quovolver({autoPlaySpeed : 10000});
 
 });

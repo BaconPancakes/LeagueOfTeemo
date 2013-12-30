@@ -4,25 +4,34 @@ require 'settingslogic'
 class Search
   SEARCH_DEPTH = 10
   attr_accessor :teemo_count_me, :teemo_count_total, :teemo_damage_dealt,
-                :teemo_kills, :teemo_deaths, :teemo_damage_taken, :summoner,
+                :teemo_kills, :teemo_deaths, :teemo_damage_taken, :summoner, :status,
                 :teemo_turrets_killed, :teemo_minions_slain, :teemo_gold, :teemo_time, :teemo_assists, :teemo_CC
   def initialize(summoner, region)
     @teemo_count_me, @teemo_count_total, @teemo_damage_dealt,
         @teemo_kills, @teemo_deaths, @teemo_damage_taken, @teemo_turrets_killed, @teemo_gold,
         @teemo_minions_slain, @teemo_time, @teemo_assists, @teemo_CC = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     @summoner = summoner
-    Vigor.configure(Settings.api_key, region)
+    @status = nil
     begin
+      Vigor.configure(ENV['api_key'], region)
       summoner = Vigor.summoner(summoner)
     rescue Vigor::Error::SummonerNotFound
       @summoner = nil
+    rescue Vigor::Error::ApiError
+      @summoner = nil
+      @status = "ratelimit"
     end
     if @summoner != nil
-      self.analyze(summoner)
+      begin
+        self.analyze(summoner)
+      rescue Vigor::Error::ApiError
+        @summoner = nil
+        @status = "ratelimit"
+      end
     end
   end
 
-  #collect all the Teemo statistics
+#collect all the Teemo statistics
   def get_stats(game)
     game.stats.each do |stat|
       if stat['name'] == 'TOTAL_DAMAGE_DEALT_TO_CHAMPIONS'
