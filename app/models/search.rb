@@ -11,7 +11,7 @@ class Search
         @teemo_kills, @teemo_deaths, @teemo_damage_taken, @teemo_turrets_killed, @teemo_gold,
         @teemo_minions_slain, @teemo_time, @teemo_assists, @teemo_CC = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
     @summoner = summoner
-    Vigor.configure(ENV['api_key'], region)
+    Vigor.configure(Settings.api_key, region)
     begin
       summoner = Vigor.summoner(summoner)
     rescue Vigor::Error::SummonerNotFound

@@ -5,11 +5,17 @@
   display: inline;
   float: right;
   margin-left: -8%;
-  margin-top: -3.5%;
+  margin-top: -3.9%;
 
 }
-#header  {
-  margin-bottom: 3%;
+#header-main  {
+  font-size: 64.5px;
+}
+#header {
+ margin-bottom: 23px;
+}
+.h1 {
+  font-size: 64.5px;
 }
 #submit-button {
   display: block;
@@ -19,12 +25,56 @@
   margin-bottom: 2%;
 }
 #summoner {
-  width: 84%;
-  height:100%;
+  width: 82%;
+  height:38px;
   margin-left:0%
 }
 
 #bar  {
   margin-right:auto;
   margin-left:auto;
+}
+
+
+#background {
+  position: relative;
+  background: none;
+}
+#background:after {
+  content:"";
+  background: url('/assets/Splash_Super_Teemo.jpg');
+  background-position-y: 60%;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+testimonial_widget  {
+  overflow:hidden;
+}
+
+#Banner {
+  background: url('/assets/Teemo_AstronautSkin.jpg');
+  height: 160px;
+  width: 1140px;
+  position: static;
+  display: block;
+  opacity: 0.9;
+  text-align: right;
+  box-shadow: 5px 5px 5px #888;
+  background-position-y: 35%;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.quote-container  {
+  height: 120px;
+}
+.quote {
+  height: 100px;
 }

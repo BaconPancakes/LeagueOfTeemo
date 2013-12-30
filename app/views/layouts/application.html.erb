@@ -1,3 +1,4 @@
+<% provide(:description, 'Teemo statistics lookup tool.') %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,6 @@
   <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Teemo" %>">
   <%= stylesheet_link_tag "application", media: "all" %>
   <%= javascript_include_tag "application" %>
-  <script src="https://code.jquery.com/jquery.js"></script>
 
   <%= csrf_meta_tags %>
 </head>
@@ -21,4 +21,12 @@
   <%= yield %>
   </body>
 </div>
+
+<footer class = "container">
+    <ul class ="navbar nav">
+      <li>This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.</li>
+    </ul>
+</footer>
+
 </html>
+

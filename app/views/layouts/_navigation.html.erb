@@ -1,10 +1,8 @@
 <%# navigation styled for Bootstrap 3.0 %>
-<div class = "navbar role navbar-fixed-top navbar-inverse" role = "navigation">
+<div class = "navbar navbar-fixed-top navbar-inverse" role = "navigation">
   <div class = "container">
     <div class ="navbar-header">
-      <a class = "navbar-brand">
-        <%=link_to "League of Teemo", root_path, id: "logo" %>
-      </a>
+        <%=link_to "League of Teemo", root_path, id: "logo", :class => "navbar-brand"%>
     </div>
     <ul class ="nav navbar-nav navbar-right">
       <li><%= link_to "Home",   root_path %></li>

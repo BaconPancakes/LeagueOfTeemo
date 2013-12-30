@@ -1,0 +1,49 @@
+#background-results{
+  position: relative;
+  background: none;
+};
+#background-results:after {
+  content:"";
+  background: url('/assets/Teemo_PandaSkin.jpg');
+  background-position-y: 60%;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+};
+
+#side-banner {
+  background: url("/assets/Teemo_CottontailSkin.jpg");
+  height: 400px;
+  width: 200px;
+  position: static;
+  background-position: 74% 67%;
+  float: right;
+  margin-right: 19px;
+  margin-top:  -23%;
+  display: inline-block;
+  text-align: right;
+  opacity: 0.8;
+  box-shadow: 5px 5px 5px #888;
+}
+
+#noresults-banner {
+  background: url("/assets/Teemo_0.jpg");
+  height: 161px;
+  width: 734px;
+  margin-left:  auto;
+  margin-right: auto;
+  opacity: 0.9;
+  margin-bottom: 4%;
+  text-align: right;
+  box-shadow: 5px 5px 5px #888;
+  background-position-y: 21%;
+  background-position-x: 100%;
+}

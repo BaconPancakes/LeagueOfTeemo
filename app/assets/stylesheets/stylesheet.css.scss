@@ -15,28 +15,25 @@ section {
   margin-bottom: 10px;
 }
 .navbar .nav > li{
-  line-height: 25px;
+
 }
 .navbar .container {
 
 }
 
 #logo {
-  float:left;
-  margin-right: 12px;
-  font-size: 1.7em;
-  padding-top: 12px;
-  text-transform: none;
-  font-weight: bold;
-  color: #ffffff;
 }
-
 #logo:hover {
-  text-decoration:none;
+
 }
 
 /* typography */
 
+footer {
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+  padding-top: 20px;
+}
 
-body { padding-top: 100px; }
+body { padding-top: 70px; }
 

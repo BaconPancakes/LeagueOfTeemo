@@ -1,12 +1,6 @@
 <% provide(:title, 'Teemo!') %>
-<div class = "container">
-  <div class = "center jumbotron">
-    <h2>Teemo Statistics</h2>
-    <h3>You entered a valid summoner! Way to go!</h3>
-  </div>
-
   <div class = "container">
     <%= render :partial =>"main/noresults" if @results.teemo_count_total == 0 %>
     <%= render :partial => "main/results" if @results.teemo_count_total > 0%>
   </div>
-</div>
+

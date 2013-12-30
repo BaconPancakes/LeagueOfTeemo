@@ -1,30 +1,46 @@
 <% provide(:title, 'Home') %>
-
-<div class="jumbotron">
+<div class="jumbotron" id =  "background">
   <div class = "container center">
     <div id = "header">
-      <h1 class = "h1">Welcome to the League of Teemo!</h1>
+      <h1 class = "h1" id = "header-main">Welcome to the League of Teemo!</h1>
     </div>
     <%= form_tag("/search", method: "get",) do %>
         <div class = "container" id = "bar">
           <%= text_field_tag :summoner, nil, :placeholder => "Enter a summoner here.", :class => 'form-control' %>
 
           <div class="btn-group" id = "regions" data-toggle="buttons">
-            <label class = "btn btn-default active">
+            <label class = "btn btn-default active btn-sm">
               <%= radio_button_tag(:region, 'na', true, :name =>'region', :style=>"display:none")%> NA
             </label>
-            <label class = "btn btn-default">
+            <label class = "btn btn-default btn-sm">
               <%= radio_button_tag(:region, 'euw', nil, :name =>'region', :style=>"display:none")%>EUW
             </label>
-            <label class = "btn btn-default">
+            <label class = "btn btn-default btn-sm">
               <%= radio_button_tag(:region, 'eune', nil, :name =>'region', :style=>"display:none")%>EUNE
             </label>
           </div>
         </div>
-        <%= submit_tag("Let's Teemo!", :name => nil, :class => 'btn btn-info', :id => 'submit-button') %>
+        <% message = ["Never underestimate the power of the Scout's Code.", "Captain Teemo on duty.",
+                      "Size doesn't mean everything.", "Hut two three four", "Armed and ready."] %>
+        <%= submit_tag("Let's Teemo!", :name => nil, :class => 'btn btn-primary', :id =>
+                'submit-button', data: {'loading-text' => message.sample}) %>
     <% end %>
     <p>
-      Implementing features soon!
+      Implementing more features soon!
     </p>
   </div>
+</div>
+<div class ="container quote-container">
+  <%= render :partial=>'main/quotes'%>
+</div>
+<div class = "container" id = "Banner"></div>
+<div id = Explanation>
+  <h2>What the heck is this?</h2>
+  <p>League of Teemo looks up Teemo related statistics for a summoner. It looks through the last ten games, and collects
+    statistics for <em>anyone</em> who picked Teemo in the games.</p>
+  <p>My original idea was to use a recursive search algorithm and go even deeper, looking through the last ten games of each fellow player, and collecting
+  data until enough Teemo games were found. Obviously, I hit my <a href = "http://developer.riotgames.com/">API rate limit</a> pretty fast. Also,
+  I probably want to take a course in Algorithms first.</p>
+  <p>So for now, just try to find people who play Teemo! Compare with your friends! Don't spread it around too much, though, because I ain't paying
+  for hosting.</p>
 </div>
