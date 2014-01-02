@@ -13,7 +13,7 @@ class Search
     @summoner = summoner
     @status = nil
     begin
-      Vigor.configure(ENV['api_key'], region)
+      Vigor.configure(Settings.api_key, region)
       summoner = Vigor.summoner(summoner)
     rescue Vigor::Error::SummonerNotFound
       @summoner = nil
@@ -87,10 +87,7 @@ class Search
   end
 
   def analyze(summoner)
-
-
-    id = summoner.id
-    recent_games = Vigor.recent_games(id)
+    recent_games = summoner.recent_games
     @summoner = summoner.name
 
     recent_games.each do |game|

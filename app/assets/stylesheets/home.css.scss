@@ -4,8 +4,11 @@
 #regions  {
   display: inline;
   float: right;
-  margin-left: -8%;
-  margin-top: -3.9%;
+  margin-left: 27%;
+  margin-top: -3.25%;
+  position: absolute;
+  vertical-align: bottom;
+
 
 }
 #header-main  {
@@ -27,7 +30,8 @@
 #summoner {
   width: 82%;
   height:38px;
-  margin-left:0%
+  margin-left:0%;
+  vertical-align: bottom;
 
 }
 
