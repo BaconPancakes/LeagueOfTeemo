@@ -13,7 +13,7 @@ class Search
     @summoner = summoner
     @status = nil
     begin
-      Vigor.configure(Settings.api_key, region)
+      Vigor.configure(ENV['api_key'], region)
       summoner = Vigor.summoner(summoner)
     rescue Vigor::Error::SummonerNotFound
       @summoner = nil
